@@ -12,4 +12,4 @@ if (!$conn){
 }
 
 session_start();
-include_once ("utilities.inc.php");
+include_once ("sql_utilities.php");
