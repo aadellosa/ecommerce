@@ -1,15 +1,11 @@
 <?php
-$servername="localhost";
-$dbusername="root";
-$dbpassword="";
-$dbname="lecture";
+// Connect to database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "hotel";
 
-$conn = mysqli_connect($servername,$dbusername,$dbpassword,$dbname);
-
-// Check connection
-if (!$conn){
-    die("Maintenance Mode.");
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
 }
-
-session_start();
-include_once ("sql_utilities.php");
